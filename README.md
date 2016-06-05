@@ -15,7 +15,7 @@ npm install ws
 npm install geoip-lite 
 npm install -g forever
 ```
-- Click 'Start-Node.bat' to run. You can also click 'Start-Forever.bat' if you want server to be automatically restarted.(But then cant execute any server commands in console).
+- Go to LulzyOgar/src folder and click 'Start-Node.bat' to run. You can also click 'Start-Forever.bat' if you want server to be automatically restarted.(But then cant execute any server commands in console).
 
 - For Linux do:
 ```
