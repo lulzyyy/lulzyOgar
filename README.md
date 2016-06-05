@@ -28,8 +28,10 @@ To install LulzyOgar do:
 ```
 ~$ git clone git://github.com/lulzyyy/lulzyOgar.git lulzyOgar
 ~$ cd lulzyOgar/src
-~$ npm install
-~$ node index.js
+~$ npm install ws
+~$ npm install geoip-lite 
+~$ npm install -g forever
+~$ node index.js or forever index.js
 ```
 
 Currently, LulzyOgar listens on the following addresses and ports:
