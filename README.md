@@ -8,7 +8,7 @@ The official website is www.c0nsume.me You connect to your server using, for exa
 
 First, you need Node.js.
 - For Windows, click https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi and install it.
-- Download c0nsume.me Ogar by clicking 'Clone or Download' -> 'Download ZIP' and unzip these files somewhere
+- Download LulzyOgar by clicking 'Clone or Download' -> 'Download ZIP' and unzip these files somewhere
 - Go to 'src' folder and click `Install Dependecies.bat` located in the folder where this file is.
 - Click 'Start-Node.bat' to run.
 
