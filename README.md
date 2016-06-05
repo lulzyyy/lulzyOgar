@@ -25,7 +25,7 @@ To install Ogar do:
 ~$ cd lulzyOgar/src
 ~$ npm install
 ~$ node index.js
-```sh
+```
 
 Currently, Ogar listens on the following addresses and ports:
 * *:600 - for the game server
