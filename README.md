@@ -7,6 +7,9 @@ The official website is www.c0nsume.me You connect to your server using, for exa
 ### Public Server
 If you want 24/7 cheap public server with anti-ddos, check www.ovh.com
 
+### Node.js Version
+I recommend using version 4.4.5 of Node.js, it's well tested, stable etc. If you have older version, then update it.
+
 ## Obtaining and Using
 
 First, you need Node.js.
