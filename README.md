@@ -109,8 +109,6 @@ The current available console commands are listed here. Command names are not ca
    * Reloads the config file used by the server. However, the following values are not affected: serverPort, serverGamemode, serverBots, serverStatsPort, serverStatsUpdate.
  - Status
    * Shows the amount of players currently connected, time elapsed, memory usage (memory used/memory allocated), and the current gamemode.
- - Tp [Player ID] [X position] [Y position]
-   * Teleports the specified player to the specified coordinates.
  - Virus [X position] [Y position] [Mass]
    * Spawns a virus cell at those coordinates. If a mass value is not specified, then the server will default to "virusStartMass" in the config.
 
