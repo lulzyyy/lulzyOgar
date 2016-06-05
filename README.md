@@ -1,5 +1,5 @@
 # LulzyOgar
-A fully functional open source c0nsume.me server implementation, written in Node.js. LulzyOgar is designed to be used with the c0nsume.me client.
+A fully functional open source c0nsume.me server implementation, written in Node.js. LulzyOgar is designed to be used with the c0nsume.me client. If you find any issues, tell me.
 
 ### Official Website
 The official website is www.c0nsume.me You connect to your server using, for example c0nsume.me/private.php?ip=127.0.0.1:600
