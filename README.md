@@ -10,7 +10,7 @@ First, you need Node.js.
 - For Windows, click https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi and install it.
 - Download LulzyOgar by clicking 'Clone or Download' -> 'Download ZIP' and unzip these files somewhere
 - Open console and write 'npm install geoip-lite' and 'npm install -g forever'
-- Click 'Start-Node.bat' to run. You can also click 'Start-Forever.bat' if you want server to be automatically restarted.
+- Click 'Start-Node.bat' to run. You can also click 'Start-Forever.bat' if you want server to be automatically restarted.(But then cant execute any server commands in console).
 
 - For Linux do:
 ```
