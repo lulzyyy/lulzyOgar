@@ -19,7 +19,7 @@ First, you need Node.js.
 ~$ sudo apt-get install -y build-essential
 ```
 
-To install Ogar do:
+To install LulzyOgar do:
 ```
 ~$ git clone git://github.com/lulzyyy/lulzyOgar.git lulzyOgar
 ~$ cd lulzyOgar/src
