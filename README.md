@@ -4,6 +4,9 @@ A fully functional open source c0nsume.me server implementation, written in Node
 ### Official Website
 The official website is www.c0nsume.me You connect to your server using, for example http://c0nsume.me/private.php?ip=127.0.0.1:600
 
+### Public Server
+If you want 24/7 cheap public server with anti-ddos, check http:www.ovh.com
+
 ## Obtaining and Using
 
 First, you need Node.js.
