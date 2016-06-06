@@ -653,12 +653,12 @@ GameServer.prototype.start = function() {
 	   // do not disconnect banned player because he will be trying to connect causing flooding
        if (this.banned.indexOf(ws._socket.remoteAddress) != -1) // Banned
 		{
-			console.log("\u001B[33mClient " + ws._socket.remoteAddress + ", tried to connect but is banned!");
+			console.log("--- Client " + ws._socket.remoteAddress + ", tried to connect but is banned! ---");
 			ws.sendPacket(new Packet.SendAlert("You're banned."));
 		}
 		else if (this.clients.length >= this.config.serverMaxConnections)
 		{
-			console.log("\u001B[33mClient " + ws._socket.remoteAddress + ", tried to connect but server is full!");
+			console.log("--- Client " + ws._socket.remoteAddress + ", tried to connect but server is full! ---");
 			ws.sendPacket(new Packet.SendAlert("Server is full."));
 		}
 		else // player isn't banned and server isn't full so create a new client
