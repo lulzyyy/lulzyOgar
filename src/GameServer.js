@@ -1038,7 +1038,7 @@ GameServer.prototype.spawnPlayer = function(player, pos, mass)
 						if ((typeof this.clients[j].remoteAddress != 'undefined') && (this.clients[j].remoteAddress == thisPlayerAddress))
 						{
 							//console.log("Zbanowano bota: "+thisPlayerAddress);
-							this.clients[j].playerTracker.socket.sendPacket(new Packet.SendAlert("You've been banned for a few minutes using bots or multiboxing."));
+							this.clients[j].playerTracker.socket.sendPacket(new Packet.SendAlert("You've been banned for using bots or multiboxing."));
 							this.clients[j].close();
 						}
 					}
