@@ -13,6 +13,9 @@ If you don't know your IP address, check it there https://www.whatismyip.com/
 ### Node.js Version
 I recommend using version 4.4.5 of Node.js, it's well tested, stable etc. If you have older version, then update it.
 
+### Problems
+If you have problems with running your sever, post it in Issues section https://github.com/lulzyyy/lulzyOgar/issues
+
 ## Obtaining and Using
 
 First, you need Node.js.
