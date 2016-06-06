@@ -7,7 +7,7 @@ var Version = '1.0';
 // Init variables
 var showConsole = true;
 var request = require('request');
-
+console.log("Starting server...");
 // Handle arguments
 process.argv.forEach(function (val) {
   if (val == "--noconsole") {
