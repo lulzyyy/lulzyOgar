@@ -16,7 +16,7 @@ var Gamemode = require('./gamemodes');
 var BotLoader = require('./ai/BotLoader');
 var minionLoader = require('./ai/minionLoader');
 var Logger = require('./modules/log');
-var sys = require('sys');
+var sys = require('util');
 
 // GameServer implementation
 function GameServer() {
