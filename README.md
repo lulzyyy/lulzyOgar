@@ -50,8 +50,8 @@ Please note that on some systems, you may have to run the process as root or oth
 
 Once the game server is running, you can connect (locally) by typing http://c0nsume.me/private.php?ip=127.0.0.1:600 into your browser's address bar.
 
-## Configuring Ogar
-Use "gameserver.ini" to modify Ogar's configurations field. Player bots are currently basic and for testing purposes. To add/remove bot names, edit the file named "botnames.txt" which is in the same folder as "gameserver.ini". Names should be separated by using the enter key.
+## Configuring LulzyOgar
+Use "gameserver.ini" to modify LulzyOgar's configurations field. Player bots are currently basic and for testing purposes. To add/remove bot names, edit the file named "botnames.txt" which is in the same folder as "gameserver.ini". Names should be separated by using the enter key.
 To add for example 10 bots just write in console 'addbots 10' and to kick them, write 'kickbots 10'.
 ## Game modes
 LulzyOgar has support for 3 basic game modes. To switch between game modes, change the value of "gamemode" in the configurations file to the selected game mode id and restart the server. The current supported game modes are:
