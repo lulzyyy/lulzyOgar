@@ -43,6 +43,7 @@ To install LulzyOgar do:
 ~$ npm install ws
 ~$ npm install geoip-lite 
 ~$ npm install -g forever
+~$ npm install request
 ~$ node index.js or forever index.js
 ```
 
