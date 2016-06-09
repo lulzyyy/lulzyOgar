@@ -407,11 +407,31 @@ PlayerTracker.prototype.antiTeamTick = function() {
 };
 
 PlayerTracker.prototype.updateSightRange = function() { // For view distance
-    var factor = Math.pow(Math.min(64.0 / (Math.ceil(Math.sqrt(100 * (this.score)))), 1), 0.4);
-	//console.log("Masa: "+this.score+", factor: "+factor);
-	this.sightRangeX = this.gameServer.gameMode.ID = 1 ? (this.gameServer.config.serverViewBaseX / factor)*2 : this.gameServer.config.serverViewBaseX / factor;
-	this.sightRangeY = this.sightRangeX/1.5;
-	//console.log(this.sightRangeX+", "+this.sightRangeY);
+
+var totalSize = 1.0;
+var len = this.cells.length;
+
+	if (len > 1)
+	{
+		for (var i = 0; i < len; i++) {
+			if (!this.cells[i]) {
+				continue;
+			}
+
+			totalSize += this.cells[i].getSize();
+		}
+
+		var factor = Math.pow(Math.min(64.0 / totalSize, 1), 0.4);
+		this.sightRangeX = this.gameServer.config.serverViewBaseX / factor;
+		this.sightRangeY = this.gameServer.config.serverViewBaseY / factor;
+	}
+	else
+	{
+		var factor = Math.pow(Math.min(64.0 / (Math.ceil(Math.sqrt(100 * (this.score)))), 1), 0.4);
+		//console.log("Masa: "+this.score+", factor: "+factor);
+		this.sightRangeX = this.gameServer.config.serverViewBaseX / factor;
+		this.sightRangeY = this.gameServer.config.serverViewBaseX / factor;
+	}
 };
 
 PlayerTracker.prototype.updateCenter = function() { // Get center of cells
