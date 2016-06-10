@@ -496,15 +496,23 @@ PlayerTracker.prototype.getSpectateNodes = function() {
          //If selected player has died/disconnected, switch spectator and try again next tick
         if (this.specPlayer.cells.length == 0) {
             this.gameServer.switchSpectator(this);
-			//console.log("Spec zginął");
             return [];
         }
 
-        // Get spectated player's location and calculate zoom amount
-        var specZoom = Math.sqrt(100 * this.specPlayer.score);
-        specZoom = Math.pow(Math.min(40.5 / specZoom, 1.0), 0.4) * 0.6;
-        // TODO: Send packet elsewhere so it is send more often
-        this.socket.sendPacket(new Packet.UpdatePosition(this.specPlayer.centerPos.x, this.specPlayer.centerPos.y, specZoom));
+        //var specZoom = Math.sqrt(100 * this.specPlayer.score);
+        //specZoom = Math.pow(Math.min(40.5 / specZoom, 1.0), 0.4) * 0.6;
+        //this.socket.sendPacket(new Packet.UpdatePosition(this.specPlayer.centerPos.x, this.specPlayer.centerPos.y, specZoom));
+		//this.socket.sendPacket(new Packet.ClearNodes());
+		for (var i=0; i<this.specPlayer.cells.length; i++)
+		{
+			
+			cell = this.specPlayer.cells[i];
+			if (!cell)
+				continue;
+			 this.socket.sendPacket(new Packet.AddNode(cell));
+		}
+		
+		
         // TODO: Recalculate visible nodes for spectator to match specZoom
         return this.specPlayer.visibleNodes.slice(0,this.specPlayer.visibleNodes.length);
     } 
