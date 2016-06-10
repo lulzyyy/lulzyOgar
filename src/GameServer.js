@@ -1727,7 +1727,15 @@ GameServer.prototype.switchSpectator = function(player) {
         } else {
             player.spectatedPlayer = Math.min(this.clients.length - 1, oldPlayer);
 			if (this.clients[player.spectatedPlayer])
-				player.specPlayer = player.spectatedPlayer == -1 ? null : this.clients[player.spectatedPlayer].playerTracker;
+			{
+				if (player.spectatedPlayer == -1)
+					player.specPlayer = null;
+				else
+				{
+					player.socket.sendPacket(new Packet.ClearNodes());
+					player.specPlayer = this.clients[player.spectatedPlayer].playerTracker;
+				}
+			}
         }
     //}
 };
