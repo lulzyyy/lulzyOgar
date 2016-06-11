@@ -24,6 +24,7 @@ First, you need Node.js.
 - Open console and write 
 ```
 npm install ws
+npm install request
 npm install geoip-lite 
 npm install -g forever
 ```
