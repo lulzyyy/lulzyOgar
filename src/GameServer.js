@@ -564,7 +564,7 @@ GameServer.prototype.toHHMMSS = function (secs) {
 }
 
 GameServer.prototype.start = function() {	
-	this.memoryLeft = 95 - Math.round(process.memoryUsage().rss/1024/1024/Math.round(os.totalmem()/1024/1024)*100); // free ram memory left as percentage
+	this.memoryLeft = 80 - Math.round(Math.round(process.memoryUsage().rss/1024/1024)/Math.round(os.totalmem()/1024/1024)*100); // free ram memory left as percentage
 
     // Gamemode configurations
     this.gameMode.onServerInit(this);
@@ -906,7 +906,7 @@ GameServer.prototype.mainLoop = function() {
 			
             if (this.memoryUsageTick == 10)
 			{
-				this.memoryLeft = 95 - Math.round(process.memoryUsage().rss/1024/1024/Math.round(os.totalmem()/1024/1024)*100);
+				this.memoryLeft = 80 - Math.round(Math.round(process.memoryUsage().rss/1024/1024)/Math.round(os.totalmem()/1024/1024)*100);
 				if (this.memoryLeft > 0 && this.memoryLeft < 5)
 					this.exitserver("SERVER IS OUT OF MEMORY. SHUT DOWN.");
 				
