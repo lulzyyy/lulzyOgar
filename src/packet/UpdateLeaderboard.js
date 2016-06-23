@@ -27,7 +27,7 @@ UpdateLeaderboard.prototype.build = function() {
 		this.leaderboardAddings[addedElements++] = this.playersCount;
 	if (this.gameServer.config.showLag == 1)
 		this.leaderboardAddings[addedElements++] = "Your lag: "+this.clientPing+" ms";
-	if (this.gameServer.config.showServerperfomance == 1)
+	if (this.gameServer.config.lowMemoryAutoRestart == 1 && this.gameServer.config.showServerperfomance == 1)
 		this.leaderboardAddings[addedElements++] = "Server performance: "+this.memoryLeft+"%";
 	if (this.gameServer.config.showUptime == 1)
 		this.leaderboardAddings[addedElements++] = "Uptime: "+this.uptime;
