@@ -357,6 +357,7 @@ function GameServer() {
     // Config
     this.config = { // Border - Right: X increases, Down: Y increases (as of 2015-05-20)
 		showServerperfomance: 1,
+		lowMemoryAutoRestart: 1,
 		showUptime: 1,
 		showPlayersCount: 1,
 		showLag: 1,
@@ -564,7 +565,7 @@ GameServer.prototype.toHHMMSS = function (secs) {
 }
 
 GameServer.prototype.start = function() {	
-	this.memoryLeft = 80 - Math.round(Math.round(process.memoryUsage().rss/1024/1024)/Math.round(os.totalmem()/1024/1024)*100); // free ram memory left as percentage
+	this.memoryLeft = 95 - Math.round(Math.round((os.totalmem()-os.freemem())/1024/1024)/Math.round(os.totalmem()/1024/1024)*100); // free ram memory left as percentage
 
     // Gamemode configurations
     this.gameMode.onServerInit(this);
@@ -904,9 +905,11 @@ GameServer.prototype.mainLoop = function() {
 		{ // 1 Second	
 			this.uptime++;
 			
-            if (this.memoryUsageTick == 10)
+            if (this.config.lowMemoryAutoRestart == 1 && this.memoryUsageTick == 10)
 			{
-				this.memoryLeft = 80 - Math.round(Math.round(process.memoryUsage().rss/1024/1024)/Math.round(os.totalmem()/1024/1024)*100);
+				//console.log("Used memory: "+Math.round((os.totalmem()-os.freemem())/1024/1024));
+				//console.log("Total memory: "+Math.round(os.totalmem()/1024/1024));
+				this.memoryLeft = 95 - Math.round(Math.round((os.totalmem()-os.freemem())/1024/1024)/Math.round(os.totalmem()/1024/1024)*100); // free ram memory left as percentage
 				if (this.memoryLeft > 0 && this.memoryLeft < 5)
 					this.exitserver("SERVER IS OUT OF MEMORY. SHUT DOWN.");
 				
